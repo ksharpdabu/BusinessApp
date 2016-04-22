@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: "Verdada";
+    font-size: 1em;
+    background: #FBF6D6;
+}
+
+
+main {
+    margin: auto;
+    background: #FFF;
+    /*最大宽度*/
+    max-width: 800px;
+    border-bottom: medium solid #020645;
+    padding: 20px;
+    margin-top: 50px;
+    /*设置边框的圆角*/
+    border-radius:20px ;
+}
+
+footer {
+    text-align: center;
+    border-top:  thin solid #020645;
+    padding-top: 10px;
+    font-size: .8em;
+
+}
+
+
+nav {
+    position: absolute;
+    top: 14px;
+}
+
+nav a {
+    display: inline-block;   /*  设置每个<a>为一个块*/
+    color: #FFF;
+    padding: 7px 20px 7px 20px;
+    text-decoration: none;  /*  去掉下划线*/
+    font-weight: bold;
+    margin: 0px 2px 2px 2px;
+    background-color: #4c4d4e;
+    font-size: 1.15em;
+    /*设置左上角的圆角*/
+    border-top-left-radius: 10px;
+    /*设置右上角的圆角*/
+    border-top-right-radius: 10px;
+
+}
+
+/*设置鼠标悬停在导航栏的颜色*/
+nav a:hover {
+    background-color:  rgba(60, 60 ,200 , .5);
+
+    color: #000;
+}
+
+
+/*用来控制 div的隐藏和显示*/
+#home {
+    display: block;
+
+
+}
+
+#budget {
+    display: none;
+}
+
+#location {
+    display: none;
+    /*设置其中的内容居中，不只是文本还有iframe*/
+    text-align: center;
+}
+
+#contact {
+    display: none;
+}
+/*用来控制 div的隐藏和显示 over*/
+
+
+
+
+
+
+

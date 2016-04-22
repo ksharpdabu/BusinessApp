@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Application</title>
+    <link rel="stylesheet" href="mainstyle.css">
+     <script src="js/budget.js"></script>
+    <script  src="js/navigation.js" ></script>
+
+</head>
+<body onload="init()">
+    <main>
+        <nav>
+
+            <a href="#" id = "nav1" onclick="showTab(1)">Home</a>
+            <a href="#" id = "nav2" onclick="showTab(2)">Budget</a>
+            <a href="#" id = "nav3" onclick="showTab(3)">Location</a>
+            <a href="#" id = "nav4" onclick="showTab(4)">Contact</a>
+        </nav>
+
+        <div id="home">
+            <h1>Development Made Simple - Home</h1>
+
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet cursus est, eget pellentesque risus. Nam quis interdum magna. Aliquam lobortis sapien lectus, sed consectetur lorem egestas quis. Phasellus a dui ornare, posuere tellus ac, laoreet purus. Phasellus et molestie dui, quis consectetur leo. Vestibulum facilisis lectus a eros porttitor fermentum. Aenean a accumsan odio, pellentesque facilisis erat.
+             </p>
+
+             <p>
+                 Donec pulvinar quam eget augue pretium, ut ullamcorper risus finibus. Suspendisse in tortor urna. Curabitur consequat venenatis orci, quis pharetra tortor cursus a. Pellentesque commodo orci vel pulvinar ullamcorper. Vestibulum dictum mi felis, in pellentesque velit fringilla vitae. Nam et pretium magna, vitae bibendum dolor. Maecenas massa lacus, congue nec nisi sit amet, sagittis cursus odio.
+             </p>
+
+        </div>
+
+        <div id="budget">
+            <h1>Budget Slider</h1>
+            <p>Use the sliders to set the monthly limit for each budget line</p>
+            <form name="form1" id="form1">
+
+               <div id="fd">
+                   <table width="100%" border="0" cellpadding="4">
+                       <tbody>
+                            <tr>
+                                <td width="19" align="right">Food:</td>
+                                <td width="72%"><input type="range" oninput="addAll()" max="2000" min="0" id="food"
+                                style="width: 400px"></td>
+                                <td width="9%"><output for="food" id="tFoodOut">$1000</output></td>
+                            </tr>
+
+                            <tr>
+                                <td width="19" align="right">Transportation:</td>
+                                <td width="72%"><input type="range"  oninput="addAll()" max="500" min="0" id="transportation"
+                                                       style="width: 400px"></td>
+                                <td width="9%"><output for="transportation" id="transOut">$250</output></td>
+                            </tr>
+
+                            <tr>
+                                <td width="19" align="right">Entertainment:</td>
+                                <td width="72%"><input type="range" oninput="addAll()"  max="500" min="0" id="entertainment"
+                                                       style="width: 400px"></td>
+                                <td width="9%"><output for="entertainment" id="entOut">$250</output></td>
+                            </tr>
+
+
+                            <tr>
+                                <td width="19" align="right">Emergency:</td>
+                                <td width="72%"><input type="range"  oninput="addAll()" max="500" min="0" id="energency"
+                                                       style="width: 400px"></td>
+                                <td width="9%"><output for="energency" id="emergOut">$250</output></td>
+                            </tr>
+
+                            <tr>
+                                <td width="19" align="right">Clothing:</td>
+                                <td width="72%"><input type="range" oninput="addAll()"  max="500" min="0" id="clothing"
+                                                       style="width: 400px"></td>
+                                <td width="9%"><output for="clothing" id="clothingOut">$250</output></td>
+                            </tr>
+
+                            <tr>
+                                <td align="right">Total:</td>
+                                <td >&nbsp;</td>
+                                <td><div id="myTotal"></div></td>
+                            </tr>
+
+
+                       </tbody>
+
+
+                   </table>
+
+               </div>
+
+            </form>
+
+
+
+
+        </div>
+
+        <div id="location">
+            <!--设置h1中的文字向左对齐-->
+            <h1 align="left">North Bay, City Hall</h1>
+            <!--谷歌地图的iframe-->
+            <iframe src="http://www.google.cn/maps/embed?pb=!1m14!1m12!1m3!1d57906.17443372869!2d112.93084933241929!3d28.204087285052207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-CN!2scn!4v1461302983693" width="96%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+        </div>
+
+        <div id="contact">
+            <h1>Contact Us</h1>
+
+            <form action="" name="form2" id="form2">
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <table width="80%" cellpadding="6px" border="0">
+                        <tbody>
+                        <!--用户名-->
+                        <tr>
+                            <td align="right"><label for="cName">Your Name:</label></td>
+                            <td>
+                                <input type="text" name="cName" id="cName"
+                                required placeholder="Enter your name">
+                            </td>
+
+                        </tr>
+
+                        <!--邮箱-->
+                        <tr>
+                            <td align="right"><label for="email">Your Email:</label></td>
+                            <td>
+                                <input type="email" name="email" id="email"
+                                       required placeholder="Enter your email">
+                            </td>
+
+                        </tr>
+
+                        <!--日期-->
+                        <tr>
+                            <td align="right"><label for="respDate">Required Response Date:</label></td>
+                            <td>
+                                <input type="date" name="respDate" id="respDate" required
+                                         >
+                            </td>
+
+                        </tr>
+
+                        <!--时间-->
+                        <tr>
+                            <td align="right"><label for="respTime">Perferred Time:</label></td>
+                            <td>
+                                <input type="time" name="respTime" id="respTime"
+                                >( Optional)
+                            </td>
+
+                        </tr>
+
+                        <!--文本输入框-->
+                        <tr>
+                            <td align="right"><label for="comment">Reason for Contact:</label></td>
+                            <td>
+                                <textarea name="comment" id="comment"   rows="4"></textarea>
+                            </td>
+
+                        </tr>
+
+
+                        <!--提交按钮-->
+                        <tr>
+                            <td align="right"><input type="submit" name="submit" value="Submit"> </td>
+                            <td>
+                                <!--清空form-->
+                                <input type="reset" name="reset" value="Clear Form">
+                            </td>
+
+                        </tr>
+
+                        </tbody>  
+                        
+                    </table>
+                </fieldset>
+
+
+            </form>
+
+        </div>
+
+        <footer>
+            <a href="http://www.dabu.info/" target="new">Development Made Simple</a>  &copy; 2015
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
